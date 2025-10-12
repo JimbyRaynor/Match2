@@ -1,0 +1,1 @@
+sptShuffle(deck)
