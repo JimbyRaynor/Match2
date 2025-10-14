@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{amsmath}    % For math environments
+\usepackage{bm}    % For bold math symbols  
+\usepackage{xcolor} 
+
+\definecolor{deepdarkred}{RGB}{139,0,0} 
+
+\definecolor{cardcolour}{RGB}{240,220,214} 
+
+\begin{document}
+\parindent=0pt
+\pagestyle{empty}
+
+\pagecolor{cardcolour} 
+
+\color{deepdarkred}
+
+
+\newcommand{\myeqn}{$\displaystyle 
+\tan \left( \frac{\pi}{3} \right) = \sqrt{3}
+$}
+
+\hspace{5.6cm}\bm{\myeqn}  % bold math
+
+\vspace{1cm}
+
+
+
+\begin{picture}(0,0)
+  \put(200,0){\makebox(0,0){\bm{\myeqn}}}
+  \put(200.1,0.1){\makebox(0,0){\bm{\myeqn}}}
+   \put(200.2,0.2){\makebox(0,0){\bm{\myeqn}}}
+    \put(200.3,0.3){\makebox(0,0){\bm{\myeqn}}}
+\end{picture}
+
+\begin{picture}(0,0)
+   \color{black}
+    \put(300.4,-0.4){\makebox(0,0){\bm{\myeqn}}}
+     \put(300.5,-0.5){\makebox(0,0){\bm{\myeqn}}}
+     \put(300.6,-0.6){\makebox(0,0){\bm{\myeqn}}}
+      \put(300.7,-0.7){\makebox(0,0){\bm{\myeqn}}}
+      \put(300.8,-0.8){\makebox(0,0){\bm{\myeqn}}}
+      \color{white} 
+    \put(300,0){\makebox(0,0){\bm{\myeqn}}}
+\end{picture}
+
+
+\begin{picture}(0,0)
+   \color{black}
+    \put(100.4,-0.4){\makebox(0,0){\bm{\myeqn}}}
+     \put(100.5,-0.5){\makebox(0,0){\bm{\myeqn}}}
+     \put(100.6,-0.6){\makebox(0,0){\bm{\myeqn}}}
+      \put(100.7,-0.7){\makebox(0,0){\bm{\myeqn}}}
+      \put(100.8,-0.8){\makebox(0,0){\bm{\myeqn}}}
+      \color{deepdarkred} 
+    \put(100,0){\makebox(0,0){\bm{\myeqn}}}
+\end{picture}
+
+\end{document}
