@@ -1,5 +1,5 @@
 /// @description Check for a match
-if (global.cardselected1.spritenum == global.cardselected2.spritenum)
+if (global.cardselected1.spritenum+8 == global.cardselected2.spritenum) or (global.cardselected2.spritenum+8 == global.cardselected1.spritenum)
 		{
 			var mycard1 = global.cardselected1.position;
 			var mycard2 = global.cardselected2.position;

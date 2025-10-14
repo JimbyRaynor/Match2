@@ -1,5 +1,5 @@
 randomize();
-numCards = 7;
+numCards = 8;
 
 //show_error("hello there", true); dialog that works with HTML5 :)
 
@@ -24,7 +24,7 @@ for (var i = 0; i < deckSize; i++)
 
 for (var i = 0; i < deckSize; i++)
 {
-	deck[|i].spritenum  =( i % numCards) + 1;
+	deck[|i].spritenum  = i;
 	deck[|i].show = 0;
 	deck[|i].position = i;
 	deck[|i].visible = false;
