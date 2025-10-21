@@ -1,5 +1,6 @@
 function sptShuffle(gamedeck)
 {
+  audio_play_sound(sndShuffle,1,false)
   var mydecksize = ds_list_size(gamedeck);
   var cardsx = 130;
   var cardsy=10;
