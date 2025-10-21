@@ -18,12 +18,22 @@ if    array_contains (global.cardselected1.answers, cardsprites[global.cardselec
 			var mycard2 = global.cardselected2.position;
 			deck[|mycard1].visible  = false;
 			deck[|mycard2].visible  = false;
+			//audio_play_sound(sndCorrect,1,false)
+			audio_play_sound(sndShuffle,1,false)
+			global.myScore += 100;
 			//show_error(string(global.cardselected1.position),true);  // true/false is unused !!!
 			if (checkVictory(deck))
  			{
              global.gameState = STATE.stWon;
 			}			
-		}
+}
+else
+{
+	 global.myScore -= 200;
+	 global.myScore  = max(global.myScore,0)
+	 audio_play_sound(sndWrong,1,false)
+	 }
+
 resetSelection();
 coverAllCards(deck);
 
