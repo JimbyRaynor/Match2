@@ -1,3 +1,8 @@
+font_enable_effects(fntOpenSans, true,{glowEnable: true, glowEnd: 16, glowColour: c_red});
+
+bonus = 9999
+chainbonus = 0
+
 randomize();
 numCards = 8;
 
