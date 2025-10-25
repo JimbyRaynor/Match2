@@ -1,16 +1,11 @@
 /// @description Check for a match
 
 
-var err_ans = "answers = "+string(global.cardselected1.answers[0])
-if (array_length(global.cardselected1.answers) > 1)
-{
-	err_ans = err_ans + " : "+string(global.cardselected1.answers[1])
-}
-err_ans = err_ans + ". card = "+ string(cardsprites[global.cardselected2.spritenum])
-// show_error(err_ans,true)
 
-if    array_contains (global.cardselected1.answers, cardsprites[global.cardselected2.spritenum])
-{          //  correct match
+//if    array_contains (global.cardselected1.answers, global.cardsprites[global.cardselected2.spritenum])
+if CheckMatch()
+{
+	//  correct match
 			var mycard1 = global.cardselected1.position;
 			var mycard2 = global.cardselected2.position;
 			deck[|mycard1].visible  = false;
@@ -26,6 +21,9 @@ if    array_contains (global.cardselected1.answers, cardsprites[global.cardselec
 		   {
 				chainbonus = chainbonus * 2;
 			}
+			instance_create_depth(global.cardselected1.x+67,global.cardselected1.y+90,1,objParticleSysCorrect);
+		    instance_create_depth(global.cardselected2.x+67,global.cardselected2.y+90,1,objParticleSysCorrect);
+
 			//show_error(string(global.cardselected1.position),true);  // true/false is unused !!!
 			if (checkVictory(deck))
  			{
@@ -37,7 +35,9 @@ else
 {   // incorrect match
 	 chainbonus = 0;
 	 audio_play_sound(sndWrong,1,false)
-	 }
+	 	 instance_create_depth(global.cardselected1.x+67,global.cardselected1.y+120,1,objParticleSysNOTCorrect);
+	    instance_create_depth(global.cardselected2.x+67,global.cardselected2.y+120,1,objParticleSysNOTCorrect);
+}
 
 resetSelection();
 coverAllCards(deck);

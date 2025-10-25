@@ -1,1 +1,1 @@
-sprite_index = objGameControl.cardsprites[spritenum]
+sprite_index = global.cardsprites[spritenum]
