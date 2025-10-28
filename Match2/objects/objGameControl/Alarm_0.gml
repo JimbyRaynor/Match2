@@ -3,7 +3,7 @@
 
 
 //if    array_contains (global.cardselected1.answers, global.cardsprites[global.cardselected2.spritenum])
-if CheckMatch()
+if CheckMatchSuccess()
 {
 	//  correct match
 			var mycard1 = global.cardselected1.position;
@@ -28,15 +28,16 @@ if CheckMatch()
 			if (checkVictory(deck))
  			{
              global.gameState = STATE.stWon;
-			 global.myScore =  global.myScore + bonus;
+			 global.myScore =  global.myScore + objBonusTimer.bonus;
+			 objBonusTimer.bonus = 0;
 			}			
 }
 else
 {   // incorrect match
 	 chainbonus = 0;
 	 audio_play_sound(sndWrong,1,false)
-	 	 instance_create_depth(global.cardselected1.x+67,global.cardselected1.y+120,1,objParticleSysNOTCorrect);
-	    instance_create_depth(global.cardselected2.x+67,global.cardselected2.y+120,1,objParticleSysNOTCorrect);
+	 instance_create_depth(global.cardselected1.x+67,global.cardselected1.y+120,1,objParticleSysNOTCorrect);
+	  instance_create_depth(global.cardselected2.x+67,global.cardselected2.y+120,1,objParticleSysNOTCorrect);
 }
 
 resetSelection();

@@ -11,11 +11,11 @@ draw_set_font(fntOpenSans)
 draw_text(50,4,"FPS");
 draw_text(50,40,string(fps_real));
 
-draw_text(room_width-100,4,"Bonus");
-draw_text(room_width-100,35,string(bonus));
-
 draw_text(room_width-100,100,"Chain Bonus");
 draw_text(room_width-100,135,string(chainbonus));
+
+draw_text(room_width-100,200,"Level");
+draw_text(room_width-100,235,string(global.level));
 
 // test draw speed ----- it is fast  :)
 /*for (var i=0; i < 300; i++)

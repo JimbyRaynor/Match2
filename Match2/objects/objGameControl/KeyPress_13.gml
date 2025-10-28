@@ -1,1 +1,1 @@
-sptShuffle(deck)
+//sptShuffle(deck)
